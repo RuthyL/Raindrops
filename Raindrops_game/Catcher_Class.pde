@@ -17,7 +17,7 @@ class Catcher {
 
   void display() {
     noStroke(); 
-    image(child,x-20,y+20,125,85);
+    image(child,x-30,y+30,175,125); //cursor is girl with tongue out
   }
 
   boolean intersect(Drops d) {

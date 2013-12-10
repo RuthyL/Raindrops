@@ -1,5 +1,3 @@
-/*YOU NEED TO FIX THE CURSOR ISSUE ROOTHEE AND CHANGE THE BACKGROUND
- AND ADD CLOUDS */
 PImage sky; 
 PImage clouds;
 PImage catchingchild;
@@ -14,7 +12,7 @@ int totalDrops = 0;
 
 void setup() {
   size (400, 650);
-  clouds = loadImage("clouds.png");
+  clouds = loadImage("clouds.gif");
   sky = loadImage("sky.jpeg"); 
   PVector loc = new PVector(75, 50); 
   catchingchild = loadImage("catchingchild.gif");
@@ -56,7 +54,7 @@ void draw() {
 
     drop[i].offScreen();
   }
-  if (pos_score == 50) { //if you hit a score of 50 then you go up a level
+  if (pos_score == 25) { //if you hit a score of 50 then you go up a level
     level++;
     pos_score = 0;
     println("level "+level);
