@@ -41,7 +41,7 @@ fill(153,204,255);
     }
   }
 
-void score() {
+void score() { //your lives
     int x = 30;
     if (neg_score > 0) {
       for (int i = 0; i < neg_score; i++) {
@@ -52,8 +52,8 @@ stroke(1);
       }
     }
     else {
-      println("GAME OVER");
-      exit();
+      println("GAME OVER"); //if you run out of lives it is game over 
+      exit(); //the program exits when you lose
     }
   }
 }
