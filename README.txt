@@ -1,4 +1,4 @@
-In this game, there will be raindrops falling from the top. At the bottom there will be a catcher, 
-which the player will be in control of using the left and right arrow keys. 
-If the player doesn't catch a certain number of raindrops in a determined period of time, 
-he/she loses the game. The player has three lives, or three chances to win. 
+In this game, there will be raindrops falling from the cloud at the top of the screen. Your catcher, controlled by the mouse,
+will be a little girl with her mouth open, ready to catch the incoming drops. To level up, you have to catch 20 drops
+while still having lives left. Each time you level up, the speed of the raindrops increases, and the game gets harder.
+When you lose all of your lives, it is game over.
