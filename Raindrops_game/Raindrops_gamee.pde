@@ -1,3 +1,4 @@
+//declaring variables
 PImage sky; 
 PImage clouds;
 PImage catchingchild;
@@ -33,36 +34,32 @@ void draw() {
   catcher.setLocation(mouseX, mouseY); //catcher follows your mouse
   catcher.display();
 
-  if (timer.isFinished()) {
-    drop[totalDrops] = new Drops(random(5, 10));
-    totalDrops++;
-    if (totalDrops>= drop.length) {
-      totalDrops = 0;
+  if (timer.isFinished()) { //check the timer
+    drop[totalDrops] = new Drops(random(5, 10)); 
+    totalDrops++; //increment totalDrops
+    if (totalDrops>= drop.length) { //if we hit the end of the array
+      totalDrops = 0; //start over
     }
     timer.start();
   }
 
-  for (int i = 0; i < totalDrops; i++) {
+  for (int i = 0; i < totalDrops; i++) { 
     drop[i].fall();
-    //drop[i].setColor();
     drop[i].display();
     drop[i].score();
 
-    if (catcher.intersect(drop[i])) {
+    if (catcher.intersect(drop[i])) { //if the catcher intersects a drop the drop is caught
       drop[i].caught();
     }
 
     drop[i].offScreen();
   }
-  if (pos_score == 25) { //if you hit a score of 50 then you go up a level
+  if (pos_score == 20) { //if you hit a score of 20 then you go up a level
     level++;
     pos_score = 0;
     println("level "+level);
     neg_score = 10;
   }
 }
-
-
-
 
 
