@@ -10,6 +10,8 @@ int level = 1;
 int pos_score = 0;
 int neg_score = 10;
 int totalDrops = 0;
+Startscreen start;
+int index;
 
 void setup() {
   size (400, 650);
@@ -18,6 +20,7 @@ void setup() {
   PVector loc = new PVector(75, 50); 
   catchingchild = loadImage("catchingchild.gif");
   catcher = new Catcher(15);
+  start = new Startscreen();
   drop = new Drops[1000];
   timer = new Timer(random(300, 1000));
 
@@ -43,6 +46,7 @@ void draw() {
     timer.start();
   }
 
+
   for (int i = 0; i < totalDrops; i++) { 
     drop[i].fall();
     drop[i].display();
@@ -60,6 +64,17 @@ void draw() {
     println("level "+level);
     neg_score = 10;
   }
+
+if (timer.isFinished() && index < drop.length) {
+  index++;
 }
 
+
+start.display();
+}
+void mouseClicked() {
+  if (start.disp) {
+    start.disp = !start.disp;
+  }
+}
 
