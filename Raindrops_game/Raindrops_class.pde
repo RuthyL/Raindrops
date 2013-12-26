@@ -53,8 +53,16 @@ class Drops {
       }
     }
     else {
-      println("GAME OVER"); //if you run out of lives it is game over 
-      exit(); //the program exits when you lose
+      background(0);
+      textSize(40);
+    textAlign(CENTER);
+    text("GAME OVER", width/2, height/3);
+    fill(255); //box for "Restart"
+    rect(width/2, 300, 100, 30, 5);
+    rectMode(CENTER);
+    fill(0);
+    textSize(20);
+    text("Start Over", width/2, 310); //restart button
     }
   }
 }

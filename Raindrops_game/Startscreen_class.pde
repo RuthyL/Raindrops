@@ -9,9 +9,9 @@ class Startscreen {
   void display() {
     if (disp) {
       background(0);
-      textSize(30);
+      textSize(40);
       textAlign(CENTER);
-      text("Click anywhere to start", width/2, height/2);
+      text("CLICK ANYWHERE \n TO START", width/2, height/2);
     }
   }
 }
