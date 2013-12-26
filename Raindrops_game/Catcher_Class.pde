@@ -2,10 +2,10 @@ class Catcher {
   float r; 
   float x, y;
   PVector loc; 
-  PImage child;
+  PImage hands;
 
   Catcher (float tempR) { //constructor
-  child = loadImage("catchingchild.gif");
+  hands = loadImage("hands.gif");
     r = tempR;
     x = 0;
     y = 0;
@@ -17,7 +17,9 @@ class Catcher {
 
   void display() {
     noStroke(); 
-    image(child,x-30,y+30,175,125); //cursor is girl with tongue out
+//    image(hands,x-30,y+30,175,125); //cursor is girl with tongue out
+image(hands, x-40, y-30);
+hands.resize(85,70);
   }
 
   boolean intersect(Drops d) {

@@ -48,7 +48,9 @@ class Drops {
       for (int i = 0; i < neg_score; i++) {
         fill(0, 76, 153);
         stroke(1);
-        rect(x+20, 600, 20, 20);
+//        rect(x+20, 600, 20, 20);
+ image(heart, x+20, 600);
+        heart.resize(23, 25);
         x = x + 30;
       }
     }

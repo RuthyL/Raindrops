@@ -1,11 +1,15 @@
 /*THERE IS A GLITCH IN THE GAME RUTHY U GOTTA FIX DAT OK SO WHEN U START
-AND U WAIT TO CLICK THE STARTSCREEN THE GAME GOES OFF IN THE BACKGROUND
-NOT GOOD NOPE FIX FIX FIX*/
+ AND U WAIT TO CLICK THE STARTSCREEN THE GAME GOES OFF IN THE BACKGROUND
+ NOT GOOD NOPE FIX FIX FIX
+ 
+ ALSO THE RESTART BUTTON DOESN'T WORK*/
+
 
 //declaring variables
 PImage sky; 
+PImage heart;
 PImage clouds;
-PImage catchingchild;
+PImage hands;
 PVector loc;
 Catcher catcher;
 Drops[] drop;
@@ -19,10 +23,11 @@ int index;
 
 void setup() {
   size (400, 650);
-  clouds = loadImage("clouds.gif");
-  sky = loadImage("sky.jpeg"); 
+//  clouds = loadImage("clouds.gif");
+  sky = loadImage("sky.png"); 
+  heart = loadImage("heart.png");
   PVector loc = new PVector(75, 50); 
-  catchingchild = loadImage("catchingchild.gif");
+  hands = loadImage("hands.gif");
   catcher = new Catcher(15);
   start = new Startscreen();
   drop = new Drops[1000];
@@ -36,8 +41,8 @@ void setup() {
 void draw() {
   background (sky);
   sky.resize(400, 650);
-  image(clouds, width/2, height/20);
-  imageMode(CENTER);
+//  image(clouds, width/2, height/20);
+//  imageMode(CENTER);
   catcher.setLocation(mouseX, mouseY); //catcher follows your mouse
   catcher.display();
 
@@ -69,16 +74,27 @@ void draw() {
     neg_score = 10;
   }
 
-if (timer.isFinished() && index < drop.length) {
-  index++;
-}
+  if (timer.isFinished() && index < drop.length) {
+    index++;
+  }
 
 
-start.display();
+  start.display();
 }
 void mouseClicked() {
   if (start.disp) {
     start.disp = !start.disp;
   }
+}
+
+void restart() {
+  catcher = new Catcher(15);
+  start = new Startscreen();
+  drop = new Drops[1000];
+  timer = new Timer(random(300, 1000));
+
+  timer.start();
+  index = 0;
+
 }
 
