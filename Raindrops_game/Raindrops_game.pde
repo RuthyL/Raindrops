@@ -23,7 +23,7 @@ int index;
 
 void setup() {
   size (400, 650);
-//  clouds = loadImage("clouds.gif");
+  //  clouds = loadImage("clouds.gif");
   sky = loadImage("sky.png"); 
   heart = loadImage("heart.png");
   PVector loc = new PVector(75, 50); 
@@ -33,7 +33,7 @@ void setup() {
   drop = new Drops[1000];
   timer = new Timer(random(300, 1000));
 
-  timer.start();
+  //  timer.start();
 
   smooth();
 }
@@ -41,8 +41,8 @@ void setup() {
 void draw() {
   background (sky);
   sky.resize(400, 650);
-//  image(clouds, width/2, height/20);
-//  imageMode(CENTER);
+  //  image(clouds, width/2, height/20);
+  //  imageMode(CENTER);
   catcher.setLocation(mouseX, mouseY); //catcher follows your mouse
   catcher.display();
 
@@ -81,12 +81,12 @@ void draw() {
 
   start.display();
 }
+
 void mouseClicked() {
   if (start.disp) {
     start.disp = !start.disp;
   }
 }
-
 void restart() {
   catcher = new Catcher(15);
   start = new Startscreen();
@@ -95,6 +95,5 @@ void restart() {
 
   timer.start();
   index = 0;
-
 }
 

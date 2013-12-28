@@ -48,8 +48,8 @@ class Drops {
       for (int i = 0; i < neg_score; i++) {
         fill(0, 76, 153);
         stroke(1);
-//        rect(x+20, 600, 20, 20);
- image(heart, x+20, 600);
+        //        rect(x+20, 600, 20, 20);
+        image(heart, x+20, 600);
         heart.resize(23, 25);
         x = x + 30;
       }
@@ -57,14 +57,15 @@ class Drops {
     else {
       background(0);
       textSize(40);
-    textAlign(CENTER);
-    text("GAME OVER", width/2, height/3);
-    fill(255); //box for "Restart"
-    rect(width/2, 300, 100, 30, 5);
-    rectMode(CENTER);
-    fill(0);
-    textSize(20);
-    text("Start Over", width/2, 310); //restart button
+      textAlign(CENTER);
+      text("GAME OVER", width/2, height/3);
+      fill(255); //box for "Restart"
+      rect(width/2, 300, 100, 30, 5);
+      rectMode(CENTER);
+      fill(0);
+      textSize(20);
+      text("Start Over", width/2, 310); //restart button
     }
   }
 }
+
