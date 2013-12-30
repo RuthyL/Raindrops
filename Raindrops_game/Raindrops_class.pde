@@ -5,7 +5,7 @@ class Drops {
 
 
   //Constructor
-  Drops (float tempR) {
+  Drops (float tempR) { //Drops = constructor method name. float tempR = parameter. Takes a variable tempR which is of a float datatype
     r = tempR;
     x = random(width);
     y = 0;
