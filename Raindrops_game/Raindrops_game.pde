@@ -1,8 +1,11 @@
 /*THERE IS A PROBLEM IN THE GAME RUTHY U GOTTA FIX DAT OK SO WHEN U START
  AND U WAIT TO CLICK THE STARTSCREEN THE GAME GOES OFF IN THE BACKGROUND
  NOT GOOD NOPE FIX FIX FIX
+ also when the game is over if you move your mouse it still plays??
  (oops i'm having trouble figuring out how to do that)
- ALSO THE RESTART BUTTON DOESN'T WORK YET*/
+ ALSO THE RESTART BUTTON DOESN'T WORK YET
+ & im really confused about how to do the flowchart
+ will wait until there is an example posted*/
 
 
 //declaring variables
@@ -19,6 +22,7 @@ int neg_score = 10;
 int totalDrops = 0;
 Startscreen start;
 int index;
+boolean endScreen;
 
 void setup() {
   size (400, 650);
@@ -67,7 +71,6 @@ void draw() {
   if (pos_score == 20) { //if you hit a score of 20 then you go up a level
     level++;
     pos_score = 0;
-    println("level "+level);
     neg_score = 10;
   }
 
@@ -92,9 +95,13 @@ void mouseClicked() {
   if (start.disp) {
     start.disp = !start.disp;
   }
+  if (endScreen && mouseX >= width/2 && mouseX <= width/2) { //U  HAVE TO MAKE IT SO WHEN U CLICK THE RESTART BUTTON IT GOES
+    restart();
+  }
 }
 
 void restart() {
+  endScreen = false;
   catcher = new Catcher(15);
   start = new Startscreen();
   drop = new Drops[1000];

@@ -2,7 +2,7 @@ class Drops {
   float r; //radius of raindrop
   float x, y; // variables for location of raindrop
   float speed; // speed of raindrop
-
+  boolean endScreen;
 
   //Constructor
   Drops (float tempR) { //Drops = constructor method name. float tempR = parameter. Takes a variable tempR which is of a float datatype
@@ -55,6 +55,7 @@ class Drops {
       }
     }
     else {
+      endScreen = true;
       background(0);
       textSize(40);
       textAlign(CENTER);

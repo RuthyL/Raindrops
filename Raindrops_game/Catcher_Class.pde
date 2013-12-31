@@ -22,7 +22,9 @@ image(hands, x-40, y-30);
 hands.resize(85,70);
   }
 
-  boolean intersect(Drops d) {
+  // A function that returns true or false based on if the catcher intersects a raindrop
+boolean intersect(Drops d) {
+      // Calculate distance
     float distance = dist(x, y, d.x, d.y);
     if (distance < r + d.r) {
       return true;

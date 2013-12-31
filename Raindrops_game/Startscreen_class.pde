@@ -14,7 +14,7 @@ class Startscreen {
       text("CLICK ANYWHERE \n TO START", width/2, height/3);
       textSize(15);
       textAlign(CENTER);
-      text("INSTRUCTIONS", width/2, height/2);
+//      text("INSTRUCTIONS \n", width/2, height/2);
     }
   }
 }
