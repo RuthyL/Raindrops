@@ -2,10 +2,10 @@ class Catcher {
   float r; 
   float x, y;
   PVector loc; 
-  PImage hands;
+  PImage umbrella;
 
   Catcher (float tempR) { //constructor
-  hands = loadImage("hands.gif");
+  umbrella = loadImage("umbrella.png");
     r = tempR;
     x = 0;
     y = 0;
@@ -17,8 +17,8 @@ class Catcher {
 
   void display() {
     noStroke(); 
-image(hands, x-40, y-30);
-hands.resize(85,70);
+image(umbrella, x-35, y-5);
+umbrella.resize(70,80);
   }
 
   // A function that returns true or false based on if the catcher intersects a raindrop

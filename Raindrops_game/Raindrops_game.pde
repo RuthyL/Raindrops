@@ -12,7 +12,7 @@
 
 PImage sky; 
 PImage heart;
-PImage hands;
+PImage umbrella;
 PVector loc;
 Catcher catcher;
 Drops[] drop;
@@ -30,7 +30,7 @@ void setup() {
   sky = loadImage("sky.png"); 
   heart = loadImage("heart.png");
   PVector loc = new PVector(75, 50); 
-  hands = loadImage("hands.gif");
+  umbrella = loadImage("umbrella.png");
   catcher = new Catcher(15);
   start = new Startscreen();
   drop = new Drops[1000];
