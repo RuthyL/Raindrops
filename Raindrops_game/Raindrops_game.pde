@@ -75,9 +75,19 @@ void draw() {
   if (timer.isFinished() && index < drop.length) {
     index++;
   }
-
+  
+  textSize(30);
+  fill(255);
+  textAlign(LEFT);
+  text("Score:", 15, 55);
+  text(pos_score, 20, 110);
+  fill(255);
+  textAlign(RIGHT);
+  text("Level:", 370, 55);
+  text(level, 365, 110);
 
   start.display();
+
 }
 
 void mouseClicked() {
