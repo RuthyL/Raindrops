@@ -9,7 +9,6 @@
 //declaring variables
 PImage sky; 
 PImage heart;
-PImage clouds;
 PImage hands;
 PVector loc;
 Catcher catcher;
@@ -24,7 +23,6 @@ int index;
 
 void setup() {
   size (400, 650);
-  //  clouds = loadImage("clouds.gif");
   sky = loadImage("sky.png"); 
   heart = loadImage("heart.png");
   PVector loc = new PVector(75, 50); 
@@ -42,8 +40,7 @@ void setup() {
 void draw() {
   background (sky);
   sky.resize(400, 650);
-  //  image(clouds, width/2, height/20);
-  //  imageMode(CENTER);
+ 
   catcher.setLocation(mouseX, mouseY); //catcher follows your mouse
   catcher.display();
 
