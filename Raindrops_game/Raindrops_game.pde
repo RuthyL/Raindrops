@@ -1,9 +1,8 @@
-/*THERE IS A GLITCH IN THE GAME RUTHY U GOTTA FIX DAT OK SO WHEN U START
+/*THERE IS A PROBLEM IN THE GAME RUTHY U GOTTA FIX DAT OK SO WHEN U START
  AND U WAIT TO CLICK THE STARTSCREEN THE GAME GOES OFF IN THE BACKGROUND
  NOT GOOD NOPE FIX FIX FIX
- CHANGE THE README
- AND ALSO ADD A SCORE KEEPER
- ALSO THE RESTART BUTTON DOESN'T WORK*/
+ (oops i'm having trouble figuring out how to do that)
+ ALSO THE RESTART BUTTON DOESN'T WORK YET*/
 
 
 //declaring variables
@@ -40,7 +39,7 @@ void setup() {
 void draw() {
   background (sky);
   sky.resize(400, 650);
- 
+
   catcher.setLocation(mouseX, mouseY); //catcher follows your mouse
   catcher.display();
 
@@ -75,7 +74,7 @@ void draw() {
   if (timer.isFinished() && index < drop.length) {
     index++;
   }
-  
+
   textSize(30);
   fill(255);
   textAlign(LEFT);
@@ -87,7 +86,6 @@ void draw() {
   text(level, 365, 110);
 
   start.display();
-
 }
 
 void mouseClicked() {
@@ -95,6 +93,7 @@ void mouseClicked() {
     start.disp = !start.disp;
   }
 }
+
 void restart() {
   catcher = new Catcher(15);
   start = new Startscreen();
@@ -103,5 +102,9 @@ void restart() {
 
   timer.start();
   index = 0;
+  int level = 1;
+  int pos_score = 0;
+  int neg_score = 10;
+  int totalDrops = 0;
 }
 
