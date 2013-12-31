@@ -17,7 +17,6 @@ class Catcher {
 
   void display() {
     noStroke(); 
-//    image(hands,x-30,y+30,175,125); 
 image(hands, x-40, y-30);
 hands.resize(85,70);
   }

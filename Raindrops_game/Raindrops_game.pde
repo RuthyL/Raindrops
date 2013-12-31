@@ -9,6 +9,7 @@
 
 
 //declaring variables
+
 PImage sky; 
 PImage heart;
 PImage hands;
@@ -46,7 +47,6 @@ void draw() {
 
   catcher.setLocation(mouseX, mouseY); //catcher follows your mouse
   catcher.display();
-
   if (timer.isFinished()) { //check the timer
     drop[totalDrops] = new Drops(random(5, 10)); 
     totalDrops++; //increment totalDrops

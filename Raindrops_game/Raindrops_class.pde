@@ -18,7 +18,7 @@ class Drops {
 
   //draw drop
   void display() {
-    ;
+
     noStroke();
     fill(153, 204, 255);
     ellipseMode(CENTER);
@@ -31,7 +31,6 @@ class Drops {
     speed = 0; //stop it from moving by setting speed to zero
     x = -1000;
     pos_score++;
-    println(pos_score);
   }
   void offScreen() { //check if it hits the bottom
     if (y > height+4) {
@@ -48,7 +47,6 @@ class Drops {
       for (int i = 0; i < neg_score; i++) {
         fill(0, 76, 153);
         stroke(1);
-        //        rect(x+20, 600, 20, 20);
         image(heart, x+20, 600);
         heart.resize(23, 25);
         x = x + 30;
